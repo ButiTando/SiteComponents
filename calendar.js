@@ -1,6 +1,7 @@
 const calendarLeftArrow = document.getElementById('calendar-left-arrow');
 const calendarRightArrow = document.getElementById('calendar-right-arrow');
 const calendarMonthLable = document.getElementById('calendar-month');
+var calendarWeeks = document.getElementsByClassName('calender-week');
 
 
 const strMonths = [ "January",
@@ -19,9 +20,18 @@ const strMonths = [ "January",
 const currentDate = new Date()
 var intMonth = currentDate.getMonth();
 
-document.onload = ()=>{
-    calendarMonthLable.innerText = `${strMonths[intMonth]}`
-};
+
+function populateDays(currentMonth, year){
+    currentMonth ++; //This is done because the value received is offset by one.
+
+    numDays = new Date(year,currentMonth,0).getDate()
+    day = 1
+
+    for (var day = 1; i <= numDays; i++){
+        
+    }
+}
+
 
 calendarLeftArrow.addEventListener('click',()=>{
     
