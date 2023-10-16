@@ -2,6 +2,7 @@ const calendarLeftArrow = document.getElementById('calendar-left-arrow');
 const calendarRightArrow = document.getElementById('calendar-right-arrow');
 const calendarMonthLable = document.getElementById('calendar-month');
 
+
 const strMonths = [ "January",
                     "February",
                     "March",
@@ -16,18 +17,26 @@ const strMonths = [ "January",
                     "December"];
 
 const currentDate = new Date()
-var month = currentDate.getMonth();
+var intMonth = currentDate.getMonth();
+
+document.onload = ()=>{
+    calendarMonthLable.innerText = `${strMonths[intMonth]}`
+};
 
 calendarLeftArrow.addEventListener('click',()=>{
-    console.log("The left arrow key was pressed");
-    monthTracker --;
-    calendarMonthLable.innerText = `Month ${monthTracker}`;
     
-})
+    if(intMonth > 0){
+        intMonth --;
+    }    
+    calendarMonthLable.innerText = `${strMonths[intMonth]}`;   
+    console.log(intMonth); 
+});
 
 calendarRightArrow.addEventListener('click',()=>{
-    console.log("The right arrow key was pressed");
-    monthTracker ++;
-    calendarMonthLable.innerText = `Month ${monthTracker}`;
     
-})
+    if(intMonth < 11){
+        intMonth ++;
+    }
+    calendarMonthLable.innerText = `${strMonths[intMonth]}`;  
+    console.log(intMonth);  
+});
