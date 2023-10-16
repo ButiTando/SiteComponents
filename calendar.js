@@ -2,7 +2,21 @@ const calendarLeftArrow = document.getElementById('calendar-left-arrow');
 const calendarRightArrow = document.getElementById('calendar-right-arrow');
 const calendarMonthLable = document.getElementById('calendar-month');
 
-var monthTracker = 0;
+const strMonths = [ "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December"];
+
+const currentDate = new Date()
+var month = currentDate.getMonth();
 
 calendarLeftArrow.addEventListener('click',()=>{
     console.log("The left arrow key was pressed");
