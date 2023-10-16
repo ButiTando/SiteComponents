@@ -46,7 +46,7 @@ body{
     height: 2em;
 }
 
-#calendar-rigth-arrow{
+#calendar-right-arrow{
     background-image: url("/right_arrow.png");
     background-repeat: no-repeat;
     background-size: contain;
