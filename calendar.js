@@ -17,9 +17,8 @@ const strMonths = [ "January",
                     "November",
                     "December"];
 
-const currentDate = new Date()
+const currentDate = new Date();
 var intMonth = currentDate.getMonth();
-
 
 function populateDays(currentMonth, year){
     currentMonth ++; //This is done because the value received is offset by one.
@@ -36,8 +35,12 @@ function populateDays(currentMonth, year){
             dayElement.innerText = "";
         }
     });
-}
+};
 
+window.onload = () => {
+    populateDays(intMonth, currentDate.getFullYear());
+    calendarMonthLable.innerText = `${strMonths[intMonth]}`;
+};
 
 calendarLeftArrow.addEventListener('click',()=>{
     
