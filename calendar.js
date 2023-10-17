@@ -24,12 +24,16 @@ var intMonth = currentDate.getMonth();
 function populateDays(currentMonth, year){
     currentMonth ++; //This is done because the value received is offset by one.
 
-    numDays = new Date(year,currentMonth,0).getDate()
-    day = 1
+    numDays = new Date(year,currentMonth,0).getDate();
+    wday = 1;
 
-    for (var day = 1; i <= numDays; i++){
-        
+    for (week in calendarWeeks){
+        for (day in week){
+            day.innerText = wday;
+            wday++;
+        }
     }
+
 }
 
 
