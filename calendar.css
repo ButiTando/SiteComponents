@@ -11,10 +11,10 @@ body{
     background-color: black;
 }
 
-.calender{    
+#calendar{    
     font-family: sans-serif;
-    height: 50vh;
-    width: 50vw;
+    height: 300px;
+    width: 300px;
     max-height: 50vh;
     max-width: 30em;
     display: block;
@@ -23,11 +23,11 @@ body{
     border-radius: 20px 20px 20px 20px;
 }
 
-.calender-container{
+#calendar-container{
     width: 100%;
 }
 
-.calender-heading{
+#calendar-heading{
     column-span: 7;
     background-color: #372c4050;
     width: 100%;
@@ -42,7 +42,7 @@ body{
 }
 #calendar-month{
     color: white;
-    font-size: calc(12px + 1.25vw);
+    font-size: calc(10px + 1.25vw);
     font-family: sans-serif;
 }
 
@@ -68,18 +68,17 @@ body{
     height: 100%;
 }
 
-.calender-week{
-    height: 5em;
+.calendar-week{
     width: 5em;
     text-align: center;
 }
 
-.calender-day{  
-    font-size: calc(12px + 1.2vw); 
+.calendar-day{  
+    font-size: calc(5px + 1.2vw); 
     color: #ffffff;
 }
 
-.calender-day:hover{
+.calendar-day:hover{
     background-color: rgba(255,255,255,0.5);
 }
 
