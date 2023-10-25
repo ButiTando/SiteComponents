@@ -47,7 +47,7 @@ body{
 }
 
 #calendar-left-arrow{
-    background-image: url("/left_arrow.png");
+    background-image: url("/Calendar/left_arrow.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -58,7 +58,7 @@ body{
 }
 
 #calendar-right-arrow{
-    background-image: url("/right_arrow.png");
+    background-image: url("/Calendar/right_arrow.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;

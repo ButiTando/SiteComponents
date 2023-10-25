@@ -36,7 +36,7 @@ function populateDays(currentMonth, year){
         }
 
         else{
-            dayElement.innerText = "";
+            dayElement.parentElement.removeChild(dayElement);
         }
     });
 };
@@ -48,7 +48,7 @@ function aduptCalendar(){
     calendarHeight = calendarContainer.clientHeight;
 
     // Calendar heading dimensions
-    var calendarHeadingHeight = calendar.clientHeight * 0.1;
+    var calendarHeadingHeight = calendar.clientHeight * 0.15;
     var calendarHeadingWidth = calendar.clientWidth * 1;
 
     // Calendar container dimensions
@@ -67,13 +67,18 @@ function aduptCalendar(){
     var weekHeight = calendarHeight / 5;
 
     // Converting the calendar day elements into array for iteration
-    Array.from(calendarDays).forEach((day)=>{
+    Array.from(calendarDays).forEach((day,index)=>{
         day.style.width = `${dayWidth}px`;
+        day.style.fontSize = `${dayWidth*0.5}px`;
+        if (index == 28){
+            day.style.borderBottomLeftRadius = "10px";
+        }
     });
 
     // Converting the calendar week elements into array for iteration
     Array.from(calendarWeeks).forEach((week)=>{
         week.style.height = `${weekHeight}px`;
+        
     });
 }
 
