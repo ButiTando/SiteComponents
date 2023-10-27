@@ -23,6 +23,10 @@ body{
     color: #F3F6EE;
 }
 
+.module-card:hover{
+    cursor: pointer;
+}
+
 .card-label {
     font-size: 1.4em;
     font-family: sans-serif;
@@ -62,6 +66,12 @@ body{
     margin-bottom: 0.15em;
     text-align: left;
     vertical-align: middle;
+    z-index: 5;
+}
+
+.card-task:hover{
+    scale: 1.01;
+    border: #fff dashed 1px;
 }
 
 .card-task:first-child{
